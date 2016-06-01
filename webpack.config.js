@@ -13,6 +13,12 @@ var config = getConfig({
   clearBeforeBuild: true
 });
 
+consfig.postcss = [].concat([
+  require('precss')({}),
+  require('autoprefixer')({}),
+  require('cssnano')({})
+]);
+
 const root    = resolve(__dirname);
 const src     = join(root, 'src');
 const modules = join(root, 'node_modules');
