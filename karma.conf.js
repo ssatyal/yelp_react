@@ -13,7 +13,9 @@ module.exports = function(config) {
     plugins: [
       'karma-mocha',
       'karma-chai',
-      'karma-webpack'
+      'karma-webpack',
+      'karma-phantomjs-launcher',
+      'karma-spec-reporter'
     ],
     files: [
     ],
@@ -26,7 +28,7 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
     singleRun: false,
     concurrency: Infinity
   })
