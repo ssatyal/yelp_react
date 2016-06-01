@@ -13,7 +13,7 @@ var config = getConfig({
   clearBeforeBuild: true
 });
 
-consfig.postcss = [].concat([
+config.postcss = [].concat([
   require('precss')({}),
   require('autoprefixer')({}),
   require('cssnano')({})
