@@ -15,13 +15,16 @@ module.exports = function(config) {
       'karma-chai',
       'karma-webpack',
       'karma-phantomjs-launcher',
-      'karma-spec-reporter'
+      'karma-spec-reporter',
+      'karma-sourcemap-loader'
     ],
     files: [
+      'tests.webpack.js'
     ],
     exclude: [
     ],
     preprocessors: {
+      'tests.webpack.js': ['webpack', 'sourcemap']
     },
     reporters: ['progress'],
     port: 9876,
