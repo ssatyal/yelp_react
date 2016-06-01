@@ -1,10 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './app.css'
+import styles from './styles.module.css'
 
 const App = React.createClass({
   render: function() {
-    return(<div>hello, world</div>)
+    return(
+      <div className={styles.wrapper}>
+        hello, world
+      </div>)
   }
 });
 
