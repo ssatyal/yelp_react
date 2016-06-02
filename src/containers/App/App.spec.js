@@ -5,6 +5,11 @@ import { shallow } from 'enzyme'
 import App from './App'
 import styles from './styles.module.css'
 
+describe('<App />', () => {
+  //describe tests here:
+})
+
+
 describe('<App />', function(){
   let wrapper;
   beforeEach(() => {
