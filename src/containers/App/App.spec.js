@@ -18,14 +18,14 @@ describe('<App />', () => {
 });
 
 
-describe('<App />', function(){
-  let wrapper;
-  beforeEach(() => {
-    wrapper = shallow(<App />)
-  })
-
-  it('has a single wrapper element', () => {
-    expect(wrapper.find(`.${styles.wrapper}`))
-    .to.have.length(1);
-  });
-});
+// describe('<App />', function(){
+//   let wrapper;
+//   beforeEach(() => {
+//     wrapper = shallow(<App />)
+//   })
+//
+//   it('has a single wrapper element', () => {
+//     expect(wrapper.find(`.${styles.wrapper}`))
+//     .to.have.length(1);
+//   });
+// });
