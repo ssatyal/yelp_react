@@ -6,8 +6,16 @@ import App from './App'
 import styles from './styles.module.css'
 
 describe('<App />', () => {
-  //describe tests here:
-})
+  //define tests here:
+  let wrapper; // "dom" node wrapper element
+  beforeEach(() => {
+    wrapper = shallow(<App />);
+  });
+  it('has a Routher component', () => {
+    expect(wrapper.find('Router'))
+      .to.have.length(1);
+  });
+});
 
 
 describe('<App />', function(){
