@@ -1,15 +1,24 @@
-// Karma configuration
-// Generated on Wed Jun 01 2016 16:43:44 GMT-0400 (EDT)
+var path = require('path');
 var webpackConfig = require('./webpack.config');
 
 module.exports = function(config) {
   config.set({
     basePath: '',
-    frameworks: ['mocha','chai'],
+    frameworks: ['mocha', 'chai'],
+    files: [
+      'tests.webpack.js'
+    ],
+
+    preprocessors: {
+      // add webpack as preprocessor
+      'tests.webpack.js': ['webpack', 'sourcemap'],
+    },
+
     webpack: webpackConfig,
     webpackServer: {
       noInfo: true
     },
+
     plugins: [
       'karma-mocha',
       'karma-chai',
@@ -18,21 +27,11 @@ module.exports = function(config) {
       'karma-spec-reporter',
       'karma-sourcemap-loader'
     ],
-    files: [
-      'tests.webpack.js'
-    ],
-    exclude: [
-    ],
-    preprocessors: {
-      'tests.webpack.js': ['webpack', 'sourcemap']
-    },
-    reporters: ['progress'],
+
+    reporters: ['spec'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
-    autoWatch: true,
-    browsers: ['PhantomJS'],
-    singleRun: false,
-    concurrency: Infinity
+    browsers: ['PhantomJS']
   })
-}
+};
