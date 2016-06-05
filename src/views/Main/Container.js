@@ -3,6 +3,15 @@ import Map, {GoogleApiWrapper} from 'google-maps-react'
 import {searchNearby} from 'utils/googleApiHelpers'
 
 export class Container extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      places: [],
+      pagination: null
+    }
+  }
+
   onReady(mapProps, map) {
     const {google} = this.props;
     const opts = {
