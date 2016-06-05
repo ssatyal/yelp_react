@@ -2,10 +2,11 @@ import React, { PropTypes } from 'react'
 import ReactDOM from 'react-dom'
 import { Router } from 'react-router'
 import styles from './styles.module.css'
+import routes from '../../app.js'
 
 class App extends React.Component {
   static propTypes = {
-    routes: PropTypes.object.isRequired,
+    routes: PropTypes.object,
     history: PropTypes.object.isRequired
   }
 
@@ -24,17 +25,5 @@ class App extends React.Component {
     )
   }
 }
-
-// const App = React.createClass({
-//   render: function() {
-//     return (
-//       <div className={styles.wrapper}>
-//         <h1>
-//           <i className="fa fa-star"></i>
-//           Environment: {__NODE_ENV__}</h1>
-//       </div>
-//     )
-//   }
-// });
 
 module.exports = App;
