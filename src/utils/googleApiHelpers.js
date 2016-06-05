@@ -5,7 +5,7 @@ export function searchNearby(google, map, request) {
     service.nearbySearch(request, (results, status, pagination) => {
       if (status == google.maps.places.PlacesServiceStatus.OK) {
 
-        resolve(resulsts, pagination);
+        resolve(results, pagination);
       }else{
         reject(results, status);
       }
