@@ -1,6 +1,6 @@
 import React from 'react'
 
-export class Container extends react.Component {
+export class Container extends React.Component {
   render() {
     return (
       <div>
