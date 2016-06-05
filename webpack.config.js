@@ -103,7 +103,6 @@ config.resolve.alias = {
   'containers': join(src, 'containers'),
   'components': join(src, 'components'),
   'utils': join(src, 'utils'),
-
   'styles': join(src, 'styles')
 }
 // end Roots
