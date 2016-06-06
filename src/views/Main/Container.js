@@ -4,6 +4,7 @@ import {searchNearby} from 'utils/googleApiHelpers'
 import Header from 'components/Header/Header'
 import styles from './styles.module.css'
 import Sidebar from 'components/Sidebar/Sidebar'
+import Listing from 'components/Listing/Listing'
 
 
 export class Container extends React.Component {
@@ -45,7 +46,9 @@ export class Container extends React.Component {
           <Sidebar
             title={'Restaurants'}
             places={this.state.places}/>
-            {/*contents*/}
+            {this.state.places.map(place => {
+            return (<div key={place.id}>{place.name}</div>)
+            })}
           </Map>
       </div>
     )
