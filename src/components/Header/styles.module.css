@@ -1,6 +1,5 @@
-:root {
-  --height: 80px;
-}
+@import url("../../styles/base.css");
+
 .topbar {
   position: fixed;
   z-index: 10;
