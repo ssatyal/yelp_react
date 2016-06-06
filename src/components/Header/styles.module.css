@@ -1,12 +1,16 @@
+:root {
+  --height: 80px;
+}
 .topbar {
   position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
   background: #48b5e9;
+  height: var(--height);
+  line-height: var(--height);
   width: 100%;
   padding: 0 25px;
-  height: 80px;
   line-height: 80px;
   color: #fff;
 
