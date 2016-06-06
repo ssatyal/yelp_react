@@ -43,13 +43,9 @@ export class Container extends React.Component {
           google={this.props.google}>
           <Header />
           <Sidebar
-          title={'Restaurants'}
-          places={this.state.places}/>
-            <div className={styles.content}>
-            {this.state.places.map(place => {
-              return (<div key={place.id}>{place.name}</div>)
-            })}
-            </div>
+            title={'Restaurants'}
+            places={this.state.places}/>
+            {/*contents*/}
           </Map>
       </div>
     )

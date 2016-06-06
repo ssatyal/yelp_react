@@ -6,8 +6,8 @@
   top: 0;
   left: 0;
   background: #48b5e9;
-  height: var(--height);
-  line-height: var(--height);
+  height: var(--topbar-height);
+  line-height: var(--topbar-height);
   width: 100%;
   padding: 0 25px;
   line-height: 80px;
